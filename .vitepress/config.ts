@@ -224,7 +224,7 @@ export const sidebar: ThemeConfig['sidebar'] = {
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
 
-  base: 'docs',
+  base: '/docs/',
   lang: 'en-US',
   title: 'Atrvasa',
   description: 'Atrvasa - The Growing cross-platform ecosystem',
