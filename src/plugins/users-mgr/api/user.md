@@ -18,7 +18,7 @@ outline: deep
 
 ### exceptions
 
-- [NoSuchAlgorithmException]()
+- NoSuchAlgorithmException
 
 ## Editable Version of User
 

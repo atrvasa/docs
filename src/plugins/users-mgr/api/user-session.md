@@ -13,7 +13,7 @@ create new user
 - return value
   - void
 - exceptions
-  - [NoSuchAlgorithmException]()
+  - NoSuchAlgorithmException
 
 ## getEditable
 

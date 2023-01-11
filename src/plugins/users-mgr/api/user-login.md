@@ -18,7 +18,7 @@ the request must be contained
 
 ## Return value
 
-After inspect username and password system generate [User Session](../user-session/) object and send it back.
+After inspect username and password system generate [User Session](./user-session.md) object and send it back.
 
 ## Exceptions
 
