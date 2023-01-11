@@ -274,14 +274,14 @@ export default defineConfigWithTheme<ThemeConfig>({
 
     localeLinks: [
       {
-        link: 'https://fa.vuejs.org',
+        link: 'https://fa.atrvasa.com',
         text: 'فارسی',
-        repo: 'https://github.com/vuejs-translations/docs-fa'
+        repo: 'https://github.com/atrvasa-translations/docs-fa'
       },
       {
-        link: 'https://de.vuejs.org',
+        link: 'https://de.atrvasa.com',
         text: 'Germany',
-        repo: 'https://github.com/vuejs-translations/docs-de'
+        repo: 'https://github.com/atrvasa-translations/docs-de'
       },
       {
         link: '/translations/',
