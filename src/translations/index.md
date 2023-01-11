@@ -11,6 +11,7 @@ aside: false
 ## Work in Progress Languages {#work-in-progress-languages}
 
 - [فارسی / Persian](https://fa.atrvasa.com/) [[source](https://github.com/atrvasa-translations/docs-fa)]
+- [Deutsch / German](https://de.atrvasa.com/) [[source](https://github.com/atrvasa-translations/docs-de)]
 
 ## Starting a new Translation {#starting-a-new-translation}
 
