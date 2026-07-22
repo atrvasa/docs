@@ -24,16 +24,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 
           cache: npm
       - name: Install dependencies
-        run: npm ci
+        run: npm install 
       - name: Build with VitePress
         run: npm run docs:build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
+        with: 
+          path: .vitepress/dist 
 
   deploy:
     environment:
