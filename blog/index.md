@@ -78,23 +78,16 @@ layout: page
   </div>
 
   <div class="articles">    
-    <a href="/blog/bypassing-tcp-stack-with-ebpf" class="article-card">
-      <h2 class="article-title">Zero-Copy Microservices: Bypassing the TCP Stack with eBPF</h2>
+    <a href="/blog/00-rfcs/atrvasa-core-architecture" class="article-card">
+      <h2 class="article-title">Why the Future of Zero-Trust is in the Kernel Layer</h2>
       <div class="article-meta">
-        <span>📅 Aug 15, 2026</span>
-        <span>⏱️ 8 min read</span>
-        <span>🏷️ eBPF, Architecture</span>
+        <span>📅 Aug 2, 2026</span>
+        <span>⏱️ 5 min read</span>
+        <span>🏷️ #eBPF #Rust #ZeroTrust</span>
       </div>
-      <p class="article-excerpt">Discover how ATRVASA uses BPF_PROG_TYPE_SOCK_OPS and sk_msg to short-circuit local traffic, entirely avoiding the Linux TCP/IP stack overhead.</p>
-    </a>
-    <a href="/blog/why-rust-for-kernel-control-planes" class="article-card">
-      <h2 class="article-title">Why We Chose Rust over C/Go for the ATRVASA Control Plane</h2>
-      <div class="article-meta">
-        <span>📅 Jul 22, 2026</span>
-        <span>⏱️ 6 min read</span>
-        <span>🏷️ Rust, Security</span>
-      </div>
-      <p class="article-excerpt">A technical breakdown of leveraging the Aya framework for memory-safe eBPF deployment and why abandoning the traditional C-toolchain was the right call.</p>
+      <p class="article-excerpt">Discover how ATRVASA uses Rust and eBPF to eliminate user-space bottlenecks and build a zero-overhead firewall. Read our first architectural RFC.</p>
     </a>
   </div>
+
+  <news-letter />
 </div>
