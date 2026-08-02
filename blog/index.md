@@ -5,8 +5,7 @@ sidebar: false
 layout: page
 ---
 
-<style>
-/* Custom CSS just for the blog index page to make it look like a blog */
+<style> 
 .blog-index {
   max-width: 800px;
   margin: 0 auto;
@@ -21,16 +20,15 @@ layout: page
   font-weight: bold;
   margin-bottom: 10px;
   
-  /* --- بخش اضافه‌شده برای حل مشکل بریدگی --- */
+ 
   line-height: 1.3; 
-  padding-bottom: 0.1em; /* کمی فضا برای حروف پایین‌رونده مثل g */
-  padding-top: 0.1em;    /* کمی فضا برای حروف بالارونده */
-  /* ------------------------------------------ */
+  padding-bottom: 0.1em; 
+  padding-top: 0.1em;     
 
   background: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* استاندارد جدیدتر را هم اضافه کنید */
+  background-clip: text; 
 }
 .blog-header p {
   font-size: 1.2rem;
