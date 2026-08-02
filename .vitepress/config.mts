@@ -3,72 +3,120 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ATRVASA",
-  description: "atrvasa",
+  description: "eBPF-powered, Rust-native Zero-Trust Security Ecosystem",
+
+  // Core configurations
+  lang: 'en-US',
+  lastUpdated: true, // Displays the last update time of each page based on git commits
+  cleanUrls: true, // Removes .html from the URLs for a cleaner look
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    // Top-level navigation menu
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/guide/' },
-      { text: 'Blog', link: '/blog/' }
+      { text: 'Guide', link: '/guide/introduction', activeMatch: '/guide/' },
+      { text: 'Architecture', link: '/architecture/overview', activeMatch: '/architecture/' },
+      { text: 'Usage / CLI', link: '/usage/cli-reference', activeMatch: '/usage/' },
+      { text: 'Development', link: '/development/contributing' },
+      { text: 'Blog', link: '/blog/' },
+      // { text: 'Sponsor 💖', link: '/sponsor' } 
     ],
 
+    // Contextual sidebar menus based on the current route
     sidebar: {
-      // سایدبار مخصوص بخش مستندات محصول
       '/guide/': [
         {
-          text: 'Introduction',
+          text: 'Getting Started',
+          collapsed: false,
           items: [
-            { text: 'What is ATRVASA?', link: '/guide/' },
-            { text: 'Architecture', link: '/guide/architecture' },
-            { text: 'Getting Started', link: '/guide/getting-started' }
+            { text: 'Introduction', link: '/guide/introduction' },
+            { text: 'Prerequisites & Kernel Requirements', link: '/guide/prerequisites' },
+            { text: 'Quickstart Guide', link: '/guide/quickstart' }
+          ]
+        },
+        {
+          text: 'Core Concepts',
+          collapsed: false,
+          items: [
+            { text: 'Sidecarless Architecture', link: '/guide/concepts/sidecarless' },
+            { text: 'Zero-Trust Model in eBPF', link: '/guide/concepts/zero-trust' },
+            { text: 'eBPF Hooks & Kernel Bypass', link: '/guide/concepts/ebpf-hooks' }
+          ]
+        },
+        {
+          text: 'Ecosystem Components',
+          collapsed: false,
+          items: [
+            { text: 'eBPF Firewall Engine', link: '/guide/components/firewall' },
+            { text: 'API Shadow Detector', link: '/guide/components/shadow-detector' },
+            { text: 'Embedded OPA Engine', link: '/guide/components/opa-engine' }
+          ]
+        },
+        {
+          text: 'Case Study & Deployment',
+          collapsed: false,
+          items: [
+            { text: 'Interoperability Scenario', link: '/guide/deployment/case-study' },
+            { text: 'Kubernetes (KinD) Setup', link: '/guide/deployment/kubernetes' }
           ]
         }
       ],
-      
-      // سایدبار مخصوص بخش مقالات (وبلاگ)
-      '/blog/': [
+      '/architecture/': [
         {
-          text: 'Rust Mastery',
+          text: 'System Architecture',
           collapsed: false,
           items: [
-            { text: 'Syntax & Structs', link: '/blog/01-rust-mastery/syntax-structs' },
-            { text: 'Ownership & Borrowing', link: '/blog/01-rust-mastery/ownership' },
-            { text: 'Lifetimes', link: '/blog/01-rust-mastery/lifetimes' },
+            { text: 'Overview', link: '/architecture/overview' },
+            { text: 'eBPF Data Plane', link: '/architecture/data-plane' },
+            { text: 'Rust Control Plane', link: '/architecture/control-plane' }
           ]
-        },
+        }
+      ],
+      '/usage/': [
         {
-          text: 'Linux & eBPF Concepts',
-          collapsed: true,
+          text: 'Operations & Reference',
+          collapsed: false,
           items: [
-            { text: 'Userspace vs Kernel', link: '/blog/02-linux-ebpf/userspace-vs-kernel' },
-            { text: 'eBPF Architecture', link: '/blog/02-linux-ebpf/ebpf-architecture' },
+            { text: 'CLI Reference', link: '/usage/cli-reference' },
+            { text: 'Policy Configuration', link: '/usage/policy-config' }
           ]
-        },
+        }
+      ],
+      '/development/': [
         {
-          text: 'Aya Framework',
-          collapsed: true,
+          text: 'Developer Guide',
+          collapsed: false,
           items: [
-            { text: 'Aya Architecture', link: '/blog/03-aya-framework/aya-architecture' },
-          ]
-        },
-        {
-          text: 'Building the Product',
-          collapsed: true,
-          items: [
-            { text: 'XDP Optimization', link: '/blog/04-building-product/xdp-optimization' },
-            { text: 'CI/CD for eBPF', link: '/blog/04-building-product/github-actions-cicd' },
+            { text: 'Contributing Guidelines', link: '/development/contributing' },
+            { text: 'Environment Setup', link: '/development/environment-setup' },
+            { text: 'Project Structure', link: '/development/project-structure' }
           ]
         }
       ]
     },
 
+    // Repository links
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/atrvasa' }
+      { icon: 'github', link: 'https://github.com/atrvasa/atrvasa' } // Update with your actual repo
     ],
 
+    // Footer configuration
     footer: {
-      // message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026 ATRVASA Contributors'
+      message: 'Released under <a href="/license">Multiple Licenses</a> (Open-Core model).',
+      copyright: 'Copyright © 2024-present ATRVASA Contributors'
+    },
+
+    // Built-in local search for fast indexing without external dependencies like Algolia
+    search: {
+      provider: 'local'
+    },
+
+    // Outline depth for the right-side table of contents
+    outline: {
+      level: [2, 3],
+      label: 'On this page'
     }
   }
 })
